@@ -1,15 +1,16 @@
 package org.example;
 
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+
 public class Main {
     public static void main(String[] args) {
-        Person person = new Person();
-        person.setName("Mike");
-        person.setAge(22);
-        person.setGender("Male");
-        System.out.println(person.getName());
-        System.out.println(person.getAge());
-        System.out.println(person.getGender());
+       var context = new AnnotationConfigApplicationContext(ProjectConfig.class, Secbean.class);
+       Person p = context.getBean(Person.class);
+       System.out.println(p.getName());
+       System.out.println(p.getAge());
+       System.out.println(p.getGender());
+       pc pc = context.getBean("pc1",pc.class);
+        System.out.println(pc.getCPU());
+        System.out.println(pc.getGPU());
         }
     }
