@@ -9,6 +9,7 @@ public class pc {
     private String GPU;
     private String RAM;
     private String HDD;
+
     @Autowired
     private Person person;
 

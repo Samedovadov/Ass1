@@ -5,7 +5,7 @@ import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Primary;
 
-@Configuration
+
 public class Secbean {
     @Bean
     pc pc1(){
@@ -25,8 +25,9 @@ public class Secbean {
         pc.setHDD("1024gb");
         return pc;
     }
+
     @Primary
-@Bean
+    @Bean
     pc pc3(){
         pc pc = new pc();
         pc.setCPU("AMD R3500x");

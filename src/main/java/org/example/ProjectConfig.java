@@ -29,9 +29,9 @@ public class ProjectConfig {
     }
 
     @Bean
-    public Person Jack() {
+    public Person Emeli() {
         Person person = new Person();
-        person.setName("Sweety Fox");
+        person.setName("Emeli");
         person.setAge(22);
         person.setGender("Female");
         return person;
