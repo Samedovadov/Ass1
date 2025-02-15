@@ -25,6 +25,7 @@ public class Secbean {
         pc.setHDD("1024gb");
         return pc;
     }
+    @Primary
 @Bean
     pc pc3(){
         pc pc = new pc();

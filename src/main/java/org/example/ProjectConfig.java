@@ -6,11 +6,12 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Primary;
 
 @Configuration
+@ComponentScan(basePackages = "org.example")
 public class ProjectConfig {
 
     @Bean
     @Primary
-    Person Mike(){
+    public Person Mike() {
         Person person = new Person();
         person.setName("Mike");
         person.setAge(22);
@@ -19,7 +20,7 @@ public class ProjectConfig {
     }
 
     @Bean
-    Person Bob(){
+    public Person Bob() {
         Person person = new Person();
         person.setName("Bob");
         person.setAge(22);
@@ -28,7 +29,7 @@ public class ProjectConfig {
     }
 
     @Bean
-    Person Jack(){
+    public Person Jack() {
         Person person = new Person();
         person.setName("Sweety Fox");
         person.setAge(22);
@@ -36,4 +37,3 @@ public class ProjectConfig {
         return person;
     }
 }
-

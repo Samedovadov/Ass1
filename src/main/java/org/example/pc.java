@@ -1,10 +1,17 @@
 package org.example;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+
+
 public class pc {
     private String CPU;
     private String GPU;
     private String RAM;
     private String HDD;
+    @Autowired
+    private Person person;
+
 
     public String getCPU() {
         return CPU;
@@ -36,5 +43,9 @@ public class pc {
 
     public void setHDD(String HDD) {
         this.HDD = HDD;
+    }
+
+    public Person getPerson() {
+        return person;
     }
 }
